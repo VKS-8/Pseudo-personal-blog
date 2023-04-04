@@ -1,0 +1,323 @@
+/* ------------- Mobile Media queries ----------------- */
+
+  @media only screen and (max-width: 380px) {
+   
+    :root {
+    --max-width: 380px;
+    --max-height: auto;
+    }
+    
+  header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 1rem;
+    width: 100%;
+    height: 12vh;
+    justify-content: space-between;
+  }
+  
+  #navbar li {
+    
+    list-style-type: none;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary-color);
+    position: absolute;
+    top: 0;
+    left: -11%;
+    margin-top: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+    /* z-index: ; Trying to figure something out with the nav and the main content interaction*/ 
+
+    /*animate slide left to right for mobile */
+    transform: translateX(-120%);
+    transition: transform 0.5s ease-out;
+  }
+  
+  nav:target {
+    transform: translateX(0);
+    transition: transform 0.55s ease-out;
+  }
+  
+  nav i {
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    color: var(--secondary-font-color);
+  }
+  
+  nav a {
+    display: block;
+    color: var(--secondary-font-color);
+    margin: 1rem;
+    padding: 0;
+  }
+  
+  nav a:hover {
+    color: var(--primary-font-color);
+    background-color: var(--secondary-color);
+  }
+  
+  nav a:focus {
+    background-image: linear-gradient(135deg, #8bc6ec, #9599e2);
+    color: var(--header-background-color);
+  }
+  
+  nav .close-menu i {
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 2.5rem;
+    color: var(--secondary-font-color);
+  }
+  
+  nav .close-menu i:focus,
+  .hamburger-menu i:focus {
+    color: var(--secondary-font-color);
+  }
+  
+  nav .close-menu i:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    border-radius: 5px;
+  }
+  
+  header .hamburger-menu i {
+    position: absolute;
+    top: 0.5rem;
+    right: 3rem;
+    padding: 0.5rem;
+    margin: 0;
+    color: var(--secondary-color);
+    font-size: 2rem;
+  }
+  
+  header .hamburger-menu i:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    border-radius: 5px;
+  }
+  
+  header .logo i {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    margin-right: auto;
+    padding: 0;
+    height: 10vh;
+    font-size: 3rem;
+    color: var(--secondary-color);
+  }
+  
+  header .logo i:hover {
+    color: var(--primary-color);
+  }
+  
+  nav .logo i {
+    position: absolute;
+    top: 0.5rem;
+    left: 3rem;
+    margin-right: auto;
+    padding: 0;
+    font-size: 3rem;
+    color: var(--secondary-font-color);
+  }
+    
+    h1 {
+    position: relative;
+    top: -10rem;
+    left: 2rem;
+    width: 15rem;
+    font-size: 2rem;
+    /* z-index: ; Trying to figure something out with the nav and the main content interaction*/ 
+  }
+  
+  h2 {
+    font-size: 0.9rem;
+  }
+  
+  h4 {
+    margin: 1rem auto;
+  }
+    
+    #main-grid-container {
+      position: relative;
+      z-index: -5;
+    }
+  
+  #hero-container {
+    position: relative;
+    margin: 1rem auto;
+    height: auto;
+    z-index: -2;
+   }
+  
+  .hero-image {
+    position: relative;
+    margin: 1rem auto;
+    z-index: -2;
+  }
+    
+  /* Trying to figure out how to set this to get the content
+    to stay behind the slide in navagation but still be able
+    to navigate when the side menu is closed */ 
+  
+  #main-content-container {
+    position: relative;
+    /* z-index: ; Trying to figure something out with the nav and the main content interaction*/ 
+    margin: -8rem auto 1rem;
+    height: auto;
+  }
+  
+  #main-content-container h2 {
+    height: fit-content;
+    margin: 0.25rem auto 3rem;
+  }
+  
+  .main-card {
+    position: relative;
+    /* z-index: ; Trying to figure something out with the nav and the main content interaction*/ 
+    display: block; 
+    margin: 3rem auto 0;
+  }
+  
+  .main-card-image {
+    margin: 1rem auto;
+    position: relative;
+    /* z-index: ; Trying to figure something out with the nav and the main content interaction*/ 
+  }
+  
+  #main-card-info {
+   grid-template-columns: repeat(2, 1fr);
+   justify-content: center;
+   grid-template-areas:
+     "likes link";
+  }
+  
+  #side-content {
+    max-width: 100%;
+    background: var(--tertiary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    width: 320px;
+    height: auto;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    /*animate slide left to right for mobile */
+    transform: translateX(130%);
+    transition: transform 0.5s ease-out;
+  }
+  
+  #side-content:target {
+    transform: translateX(0);
+    transition: transform 0.55s ease-out;
+  }
+     
+  .side-menu-open {
+    position: fixed;
+    top: 50vh;
+    right: 2vh;
+    padding: 1rem 2rem;
+    background: var(--header-background-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    border: 1px solid #fff;
+  }
+  
+   .side-menu-closed {
+    position: fixed;
+    top: 50vh;
+    left: 2vh;
+    padding: 1rem 2rem;
+    background: var(--header-background-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
+    border: 1px solid #fff;
+  }
+  
+  #contact {
+    margin-bottom: 1rem;
+    padding: 1rem;
+   
+  }
+  
+  input {
+    width: 100%;
+  }
+  
+  #submit {
+    margin: 0 5rem;
+    width: 45%;
+  }
+  
+  #submit:hover {
+   margin: 0 5rem 3px;
+    
+  }
+  
+  /*  Unable to target the correct elements 
+    in order to turn to column and then make further
+    adjustments */
+  footer {
+    height: auto;
+  /*   display: flex;
+    flex-direction: columns; */
+    margin: 0 0 1rem;
+  }
+  
+  #legal {
+    width: 100%;
+    height: auto;
+  }
+  
+  .legalUL {
+    display: flex;
+    flex-direction: columns;
+  }
+  
+  .legalInfo {
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+   }
+  
+  .legalInfo:hover {
+    border: 1px solid #fff;
+  }
+  
+  #social-icons  {
+   border-radius: 10px;
+  }
+  
+   /*--Centers the icons vertically--*/
+    #social-icons {
+      height: 10vh;
+      padding: 0.5rem;
+   }
+  
+    /*--Displays the icons without text--*/
+    #profile-link {
+      color: #aab2ff;
+      font-size: 0rem;
+      letter-spacing: 0.5rem;
+    }
+  
+    i {
+      font-size: 1.5rem;
+    }
+    
+  }
+  
