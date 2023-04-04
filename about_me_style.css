@@ -326,12 +326,12 @@ h4 {
   font-style: italic;
 }
 
-.underline {
-  text-decoration-line: underline;
+.recent-posts, .popular-posts {
+  border-radius: 5px;
 }
 
-.bold {
-    font-weight: bold;
+button .recent-posts:hover, button .popular-posts:hover {
+  background: var(--header-background-color);
 }
 
 #side-content {
