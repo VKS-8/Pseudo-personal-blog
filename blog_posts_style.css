@@ -1,4 +1,4 @@
-@import "/Code-Blog-Project-1-Veronica/mobile/mobile_blog_posts.css";
+@import "/mobile/mobile_blog_posts.css";
 @import "low_resolution_blog_posts.css";
 @import "layout_blog_posts.css"
 /*---------------Andy Bell Reset etc code; it's beautiful, it works, yes! Fixed some of my issues----------*/
@@ -121,7 +121,7 @@ select {
 }
 
 html {
-  background-image: url("https://github.com/VKS-8/psuedo-person-blog-nd-project-1/blob/main/Background_images/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg?raw=true");
+  background-image: url("/Background_images/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg");
 }
 
 body {
