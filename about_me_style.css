@@ -121,7 +121,7 @@ select {
 }
 
 html {
-  background-image: url("/Background_images/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg");
+  background-image: url("../background_images/jeremy-thomas-4dpAqfTbvKA-unsplash.jpg");
 }
 
 body {
