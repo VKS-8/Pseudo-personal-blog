@@ -304,6 +304,11 @@ h4 {
   border-radius: var(--container-border-radius);
 }
 
+.main-card-article-image {
+  height: auto;
+  width: var(--max-width);
+}
+
 .main-card {
   grid-area: card;
   display: flex;
